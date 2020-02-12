@@ -97,6 +97,7 @@ func allDevicesAcrossNamespaces(namespaces []string) func() ([]*wgtypes.Device, 
 
 			toReturn = append(toReturn, devices...)
 			client.Close()
+			ns.Close()
 		}
 
 		return toReturn, nil
