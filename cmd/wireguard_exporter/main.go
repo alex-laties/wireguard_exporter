@@ -75,6 +75,7 @@ func allDevicesAcrossNamespaces(namespaces []string) func() ([]*wgtypes.Device, 
 		defer runtime.UnlockOSThread()
 
 		toplevelNamespace, _ := netns.Get()
+		defer toplevelNamespace.Close()
 		defer netns.Set(toplevelNamespace)
 
 		toReturn := make([]*wgtypes.Device, 0, 10)
