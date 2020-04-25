@@ -3,6 +3,8 @@
 Command `wireguard_exporter` implements a Prometheus exporter for WireGuard
 devices. MIT Licensed.
 
+Forked from [mdlayher/wireguard_exporter](https://github.com/mdlayher/wireguard_exporter), this branch adds support for querying wireguard instances across multiple network namespaces.
+
 ## Example
 
 This exporter exposes metrics about each configured WireGuard device and its
